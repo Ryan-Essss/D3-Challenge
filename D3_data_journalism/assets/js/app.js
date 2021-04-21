@@ -22,7 +22,7 @@ var chartGroup = svg.append("g")
 
 // Import Data
 d3.csv("assets/data/data.csv").then(function(povertyData) {
-  console.log(povertyData)
+  //console.log(povertyData)
 
     // Step 1: Parse Data/Cast as numbers
     // ==============================
@@ -67,9 +67,7 @@ d3.csv("assets/data/data.csv").then(function(povertyData) {
     .attr("class", "stateCircle")
     .attr("opacity", ".5");
 
-    chartGroup.selectAll("text")
-    .data(povertyData)
-    .enter()
+    circlesGroup.selectAll
     .append("text")
     .text(function(d){
       console.log(d.abbr)
