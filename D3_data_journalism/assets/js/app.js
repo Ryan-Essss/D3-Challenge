@@ -57,9 +57,9 @@ d3.csv("assets/data/data.csv").then(function(povertyData) {
 
 // Step 5: Create Circles
     // ==============================
-    var circlesGroup = chartGroup.selectAll("text")
+    var circlesGroup = chartGroup.selectAll("circle")
     .data(povertyData)
-    .enter()
+    .enter()  
     .append("circle")
     .attr("cx", d => xLinearScale(d.poverty))
     .attr("cy", d => yLinearScale(d.healthcare))
@@ -67,7 +67,7 @@ d3.csv("assets/data/data.csv").then(function(povertyData) {
     .attr("class", "stateCircle")
     .attr("opacity", ".5");
 
-    chartGroup.selectAll("text")
+    chartGroup.selectAll("div")
     .data(povertyData)
     .enter()
     .append("text")
